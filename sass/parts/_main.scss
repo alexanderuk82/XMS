@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+
+.main {
+    .filter {
+        background-color: var(--white);
+        margin-bottom: 3rem;
+        @include filterTop;
+
+        &__subCarrier,
+        &__carrier,
+        &__serviceType {
+            position: relative;
+            @include dropDown;
+            .tags {
+                @include tags;
+            }
+        }
+
+        &__markup,
+        &__tariffDescription {
+            .titleFilterSpecial {
+              @include filterSpecial()
+            }
+            .tags {
+                @include tags;
+            }
+        }
+    }
+}

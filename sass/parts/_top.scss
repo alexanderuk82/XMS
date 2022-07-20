@@ -1,0 +1,58 @@
+@use '../abstracts/' as *;
+
+.top-title {
+    width: 100%;
+
+    .h2 {
+        background-color: var(--light-navy);
+        color: #fff;
+        @include font-size(titleSection, normal);
+        text-transform: uppercase;
+        padding: 1rem;
+    }
+
+    .top-event {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem 3rem;
+        align-items: center;
+        &__entries {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            text-transform: capitalize;
+
+            p {
+                font-weight: map-get($font-weight, medium);
+            }
+            .entry {
+                padding: 0.8rem 0.6rem;
+                border: 0;
+                border-radius: 2px;
+                border: solid 1px var(--warm-grey);
+                background-color: var(--white);
+                color: var(--light-navy);
+                cursor: pointer;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url(/img/carret-down.svg);
+                background-repeat: no-repeat;
+                background-position: 3.1rem 1.1rem;
+                padding-right: 2.68rem;
+
+                &:focus,
+                &:hover {
+                    outline: none;
+                    border: solid 1px var(--light-navy);
+                }
+            }
+        }
+
+        &__button {
+            .btn {
+                @include button(option);
+            }
+        }
+    }
+}

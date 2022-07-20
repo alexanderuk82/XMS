@@ -1,0 +1,61 @@
+:root {
+    //Colours
+    --pale-grey: #e6eef2;
+    --off-white: #fcfffa;
+    --grass: #65b32d;
+    --light-navy: #195b9b;
+    --brownish: #cbcbcb;
+    --white: #e4e4e4;
+    --white: #fff;
+    --beige: #fafcf8;
+    --pinkish-grey: #dbdbdb;
+    --warm-grey: #707070;
+    --dark-pink: #b32d43;
+    --off-white: #f1ffe8;
+    --pinkish-grey: #c8c8c8;
+    --brownish-grey: #636363;
+    --greyish: #b9b9b9;
+    --pinkish-grey: #ccc;
+    --light-sage: #f1f9eb;
+    --light-grey-green: #d5ecc5;
+    --light-grey: #efefef;
+}
+//Family Font
+
+$mainFont: 'Roboto', sans-serif;
+
+//Font-sizes-variables
+$font-size: (
+    'main': 1.6rem,
+    'titleSection': 1.8rem,
+);
+
+$font-weight: (
+    'normal': normal,
+    'medium': 500,
+);
+
+// Extra classes
+
+.hidden {
+    display: none !important;
+}
+.w-100 {
+    width: 100%;
+}
+.w-13rem {
+    width: 13rem;
+}
+.w-6rem {
+    width: 6rem;
+}
+.w-xs {
+    padding: 0.74rem 0;
+}
+.p-08 {
+    padding: 0.8rem 1rem;
+}
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

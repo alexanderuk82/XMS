@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="Freight management" />
+
+        <meta name="language" content="English" />
+        <meta name="author" content="Alexander burgos" />
+
+        <!-- Roboto font from google -->
+
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>Freigh management</title>
+    </head>
+    <body>
+        <!-- *****HEADER TITLE AND ENTRIES HERE -->
+        <header class="top-title">
+            <h2 class="h2">freight admin management</h2>
+
+            <div class="top-event">
+                <d iv class="top-event__entries">
+                    <p>show</p>
+
+                    <select class="entry">
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="150">150</option>
+                    </select>
+                    <p>entries</p>
+                </d>
+                <div class="top-event__button">
+                    <button class="btn">create new option</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- *****FILTER AND RESULTS SECTION HERE -->
+        <section class="main">
+            <!-- 
+
+                ********************************
+                TOP SECTION TABLE FILTERS
+                *********************************
+            -->
+            <div class="filter">
+                <div class="filter__subCarrier">
+                    <!--  Name by fitler -->
+                    <!-- SUB CARRIER -->
+                    <button class="titleFilter">
+                        <p>sub carrier</p>
+                        <img src="./img/carret-down.svg" alt="" />
+                    </button>
+
+                    <!-- Name by tags -->
+
+                    <div class="tags">
+                        <p>name</p>
+                        <span></span>
+                        <p>#</p>
+                    </div>
+
+                    <!-- DropdownbBOX -->
+                    <div class="containerDropDown hidden">
+                        <div class="containerDropDown__content">
+                            <div class="search">
+                                <input
+                                    type="text"
+                                    placeholder="search"
+                                    class="searchText"
+                                />
+                                <button>
+                                    <img
+                                        src="img/Icon awesome-search.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                            <div class="items">
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="Marktuyt"
+                                        value="Marktuyt"
+                                        id="Marktuyt"
+                                        class="optionItem"
+                                    />
+                                    <label for="Marktuyt"> Marktuyt </label>
+                                </div>
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="force"
+                                        value="force"
+                                        id="force"
+                                        class="optionItem"
+                                    />
+                                    <label for="force"> force </label>
+                                </div>
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="transUK"
+                                        value="transUK"
+                                        id="transUK"
+                                        class="optionItem"
+                                    />
+                                    <label for="transUK"> transUK </label>
+                                </div>
+
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="dhlXpress"
+                                        value="dhlXpress"
+                                        id="dhlXpress"
+                                        class="optionItem"
+                                    />
+                                    <label for="dhlXpress">dhlXpress </label>
+                                </div>
+                            </div>
+                            <div class="status">
+                                <div class="status__active">
+                                    <p>status active</p>
+                                    <input
+                                        type="checkbox"
+                                        class="toggle"
+                                        data-id="active"
+                                    />
+                                </div>
+                                <div class="status__inactive">
+                                    <p>status inactive</p>
+                                    <input
+                                        type="checkbox"
+                                        class="toggle"
+                                        data-id="inactive"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="buttonFilter">clear filter</button>
+                    </div>
+                </div>
+                <!-- CARRIER -->
+                <div class="filter__carrier">
+                    <!--  Name by fitler -->
+                    <button class="titleFilter">
+                        <p>carrier</p>
+                        <img src="./img/carret-down.svg" alt="" />
+                    </button>
+
+                    <!-- Name by tags -->
+
+                    <div class="tags">
+                        <p class="w-13rem">name</p>
+                        <span></span>
+                        <p>ID</p>
+                        <span></span>
+                        <p class="w-6rem">SCAC</p>
+                    </div>
+
+                    <!-- DropdownbBOX -->
+                    <div class="containerDropDown hidden">
+                        <div class="containerDropDown__content">
+                            <div class="search">
+                                <input
+                                    type="text"
+                                    placeholder="search"
+                                    class="searchText"
+                                />
+                                <button>
+                                    <img
+                                        src="img/Icon awesome-search.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                            <div class="items">
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="Marktuyt"
+                                        value="Marktuyt"
+                                        id="Marktuyt"
+                                        class="optionItem"
+                                    />
+                                    <label for="Marktuyt"> Marktuyt </label>
+                                </div>
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="force"
+                                        value="force"
+                                        id="force"
+                                        class="optionItem"
+                                    />
+                                    <label for="force"> force </label>
+                                </div>
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="transUK"
+                                        value="transUK"
+                                        id="transUK"
+                                        class="optionItem"
+                                    />
+                                    <label for="transUK"> transUK </label>
+                                </div>
+
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="dhlXpress"
+                                        value="dhlXpress"
+                                        id="dhlXpress"
+                                        class="optionItem"
+                                    />
+                                    <label for="dhlXpress">dhlXpress </label>
+                                </div>
+                            </div>
+                            <div class="status">
+                                <div class="status__active">
+                                    <p>status active</p>
+                                    <input
+                                        type="checkbox"
+                                        class="toggle"
+                                        data-id="active"
+                                    />
+                                </div>
+                                <div class="status__inactive">
+                                    <p>status inactive</p>
+                                    <input
+                                        type="checkbox"
+                                        class="toggle"
+                                        data-id="inactive"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="buttonFilter">clear filter</button>
+                    </div>
+                </div>
+
+                <!-- Service TYPE -->
+                <div class="filter__serviceType">
+                    <!--  Name by fitler -->
+                    <button class="titleFilter">
+                        <p>service type</p>
+                        <img src="./img/carret-down.svg" alt="" />
+                    </button>
+
+                    <!-- Name by tags -->
+
+                    <div class="tags">
+                        <p class="w-xs" id="tagService">LTL</p>
+                    </div>
+
+                    <!-- DropdownbBOX -->
+                    <div class="containerDropDown hidden">
+                        <div class="containerDropDown__content">
+                            <div class="search">
+                                <input
+                                    type="text"
+                                    placeholder="search"
+                                    class="searchText"
+                                />
+                                <button>
+                                    <img
+                                        src="img/Icon awesome-search.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                            <div class="items">
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="Marktuyt"
+                                        value="Marktuyt"
+                                        id="Marktuyt"
+                                        class="optionItem"
+                                    />
+                                    <label for="Marktuyt"> Marktuyt </label>
+                                </div>
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="force"
+                                        value="force"
+                                        id="force"
+                                        class="optionItem"
+                                    />
+                                    <label for="force"> force </label>
+                                </div>
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="transUK"
+                                        value="transUK"
+                                        id="transUK"
+                                        class="optionItem"
+                                    />
+                                    <label for="transUK"> transUK </label>
+                                </div>
+
+                                <div class="items__item">
+                                    <input
+                                        type="checkbox"
+                                        name="dhlXpress"
+                                        value="dhlXpress"
+                                        id="dhlXpress"
+                                        class="optionItem"
+                                    />
+                                    <label for="dhlXpress">dhlXpress </label>
+                                </div>
+                            </div>
+                            <div class="status">
+                                <div class="status__active">
+                                    <p>status active</p>
+                                    <input
+                                        type="checkbox"
+                                        class="toggle"
+                                        data-id="active"
+                                    />
+                                </div>
+                                <div class="status__inactive">
+                                    <p>status inactive</p>
+                                    <input
+                                        type="checkbox"
+                                        class="toggle"
+                                        data-id="inactive"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="buttonFilter">clear filter</button>
+                    </div>
+                </div>
+
+                <!-- MARKUP -->
+                <div class="filter__markup">
+                    <!--  Name by fitler -->
+                    <div class="titleFilterSpecial">
+                        <p>markup</p>
+                    </div>
+
+                    <!-- Name by tags -->
+
+                    <div class="tags p-08">
+                        <p class="">min $</p>
+                        <span></span>
+                        <p class="">max $</p>
+                        <span></span>
+                        <p class="">margin %</p>
+                    </div>
+                </div>
+
+                <!-- Tariff Description -->
+                <div class="filter__tariffDescription w-100">
+                    <!--  Name by fitler -->
+                    <div class="titleFilterSpecial">
+                        <p>tariff description</p>
+                    </div>
+
+                    <!-- Name by tags -->
+
+                    <div class="tags">
+                        <p class="">carrier PH</p>
+                        <span></span>
+                        <p class="">email</p>
+                        <span></span>
+                        <p class="">rules URL</p>
+                        <span></span>
+                        <p class="">Other</p>
+                    </div>
+                </div>
+            </div>
+            <div class="results">results</div>
+        </section>
+
+        <script src="main.js"></script>
+    </body>
+</html>
