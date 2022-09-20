@@ -1,8 +1,21 @@
 @use '../abstracts/' as *;
 
 .main {
+    margin-right: 3rem;
+    padding-inline: 3rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    @include responsive(lgdesktop) {
+        // overflow-x: unset;
+        margin-right: 0rem;
+        padding-inline: 1rem;
+    }
+
+    &:has(p) {
+        white-space: nowrap;
+    }
     .filter {
-        background-color: var(--white);
         margin-bottom: 3rem;
         @include filterTop;
 
@@ -14,12 +27,25 @@
             .tags {
                 @include tags;
             }
+            p {
+                white-space: nowrap;
+            }
+        }
+
+        &__markup,
+        &__tariffDescription {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            p {
+                white-space: nowrap;
+            }
         }
 
         &__markup,
         &__tariffDescription {
             .titleFilterSpecial {
-              @include filterSpecial()
+                @include filterSpecial();
             }
             .tags {
                 @include tags;
@@ -27,3 +53,4 @@
         }
     }
 }
+

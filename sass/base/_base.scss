@@ -3,19 +3,25 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+    font-size: 62.5%;
+
+//     @include responsive(lgdesktop){
+        
+//       font-size: 52.5%;
+  
+//   }
+    box-sizing: border-box;
 }
 
 body {
-  background-color: var(--pale-grey);
-  @include font-size(main, normal);
-  color: var(--light-navy);
-  font-family: $mainFont;
+    background-color: var(--pale-grey);
+    @include font-size(main, normal);
+    color: var(--light-navy);
+    font-family: $mainFont;
 }

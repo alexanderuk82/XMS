@@ -21,7 +21,7 @@
             <h2 class="h2">freight admin management</h2>
 
             <div class="top-event">
-                <d iv class="top-event__entries">
+                <div class="top-event__entries">
                     <p>show</p>
 
                     <select class="entry">
@@ -30,358 +30,796 @@
                         <option value="150">150</option>
                     </select>
                     <p>entries</p>
-                </d>
+                </div>
                 <div class="top-event__button">
                     <button class="btn">create new option</button>
                 </div>
             </div>
         </header>
 
-        <!-- *****FILTER AND RESULTS SECTION HERE -->
         <section class="main">
-            <!-- 
+            <table>
+                <tr class="header-table">
+                    <!-- *************** 
+                    
+                            TITLES AND DROPDOWNS HEADER
+                    -->
+                    <th>
+                        <button class="btn-header">
+                            <p>sub carrier</p>
+                            <img src="./img/carret-down.svg" alt="" />
+                        </button>
+                    </th>
+                    <th>
+                        <button class="btn-header">
+                            <p>carrier</p>
+                            <img src="./img/carret-down.svg" alt="" />
+                        </button>
+                    </th>
+                    <th>
+                        <button class="btn-header">
+                            <p>service type</p>
+                            <img src="./img/carret-down.svg" alt="" />
+                        </button>
+                    </th>
+                    <th class="tx-uppercase">Markup</th>
+                    <th class="tx-uppercase">tariff description</th>
+                </tr>
 
-                ********************************
-                TOP SECTION TABLE FILTERS
-                *********************************
-            -->
-            <div class="filter">
-                <div class="filter__subCarrier">
-                    <!--  Name by fitler -->
-                    <!-- SUB CARRIER -->
-                    <button class="titleFilter">
-                        <p>sub carrier</p>
-                        <img src="./img/carret-down.svg" alt="" />
-                    </button>
+                <!-- *************** 
+                    SUB HEADER FROM EACH MAIN TITLE
+                    -->
+                <tr>
+                    <th class="sub-header">
+                        <div class="sub-header__txt">
+                            <p>name</p>
+                            <span></span>
+                            <p>id</p>
+                        </div>
+                    </th>
+                    <th class="sub-header">
+                        <div class="sub-header__txt">
+                            <p class="w-9 px-1">name</p>
+                            <span></span>
+                            <p class="tx-uppercase px-1 w-4">id</p>
+                            <span></span>
+                            <p class="tx-uppercase px-1 w-24">scac</p>
+                        </div>
+                    </th>
+                    <th class="sub-header">
+                        <div class="sub-header__txt">
+                            <p>LTL</p>
+                        </div>
+                    </th>
+                    <th class="sub-header">
+                        <div class="sub-header__txt">
+                            <p class="px-1">Min $</p>
+                            <span></span>
+                            <p class="px-1">Max $</p>
+                            <span></span>
+                            <p class="px-1">Margin %</p>
+                        </div>
+                    </th>
+                    <th class="sub-header">
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-11">Carrier PH</p>
+                            <span></span>
+                            <p class="px-1">Email</p>
+                            <span></span>
+                            <p class="px-1 w-15">Rules URL</p>
+                            <span></span>
+                            <p class="px-1 w-14">Other</p>
+                            <p class="px-1 w-7"></p>
+                        </div>
+                    </th>
+                </tr>
 
-                    <!-- Name by tags -->
+                <!-- *************** 
+                    
+                            THE RESULTS  FOR EACH PART OF THE HEADER
+                    -->
+                <tr class="space"></tr>
 
-                    <div class="tags">
-                        <p>name</p>
+                <!-- *************** 
+                   RESULT ROWS HERE
+                    -->
+                <tr class="result">
+                    <!-- *************** 
+                    SUB-CARRIER
+                    -->
+                    <td class="result__container">
+                        <button class="result__name">
+                            <img src="img/icon-edit.png" alt="" />
+                            <p class="pr-2 mr-2">MarketUK</p>
+                        </button>
                         <span></span>
-                        <p>#</p>
-                    </div>
-
-                    <!-- DropdownbBOX -->
-                    <div class="containerDropDown hidden">
-                        <div class="containerDropDown__content">
-                            <div class="search">
-                                <input
-                                    type="text"
-                                    placeholder="search"
-                                    class="searchText"
-                                />
+                        <p class="number">1dd</p>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                    CARRIER
+                    -->
+                        <div class="sub-header__txt">
+                            <p class="w-9 breakAll spaceNormal px-1">
+                                namdddddd
+                            </p>
+                            <span></span>
+                            <p
+                                class="w-4 tx-uppercase px-1 breakAll spaceNormal"
+                            >
+                                ids
+                            </p>
+                            <span></span>
+                            <p
+                                class="tx-uppercase px-1 w-24 breakAll spaceNormal"
+                            >
+                                scas
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                    SERVICE TYPE
+                    -->
+                        <div class="sub-header__txt">
+                            <p>LTL</p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                   THE MARKUP
+                    -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-0">$10</p>
+                            <span></span>
+                            <p class="px-1 w-0">$32</p>
+                            <span></span>
+                            <p class="px-1">20%</p>
+                        </div>
+                    </td>
+                    <td class="relative">
+                        <!-- *************** 
+                   TARIFF DESCRIPTION
+                    -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-12">800-523-5d020</p>
+                            <span></span>
+                            <div class="tooltip">
                                 <button>
                                     <img
-                                        src="img/Icon awesome-search.svg"
+                                        class="px-1"
+                                        src="img/icon-view.svg"
                                         alt=""
                                     />
                                 </button>
-                            </div>
-                            <div class="items">
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="Marktuyt"
-                                        value="Marktuyt"
-                                        id="Marktuyt"
-                                        class="optionItem"
-                                    />
-                                    <label for="Marktuyt"> Marktuyt </label>
-                                </div>
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="force"
-                                        value="force"
-                                        id="force"
-                                        class="optionItem"
-                                    />
-                                    <label for="force"> force </label>
-                                </div>
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="transUK"
-                                        value="transUK"
-                                        id="transUK"
-                                        class="optionItem"
-                                    />
-                                    <label for="transUK"> transUK </label>
-                                </div>
-
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="dhlXpress"
-                                        value="dhlXpress"
-                                        id="dhlXpress"
-                                        class="optionItem"
-                                    />
-                                    <label for="dhlXpress">dhlXpress </label>
+                                <div class="tooltip__txt">
+                                    <img src="img/icon-envelope.svg" alt="" />
+                                    <a href="mailto://myemail@email.com"
+                                        >info@company.com</a
+                                    >
                                 </div>
                             </div>
-                            <div class="status">
-                                <div class="status__active">
-                                    <p>status active</p>
-                                    <input
-                                        type="checkbox"
-                                        class="toggle"
-                                        data-id="active"
-                                    />
+                            <span></span>
+                            <div class="tooltip truncText">
+                                <p class="px-1">https://www.duie...</p>
+                                <div class="tooltip__txt">
+                                    <img src="img/link.svg" alt="" />
+                                    <a href="https://google.com"
+                                        >https://www.duietrack.com</a
+                                    >
                                 </div>
-                                <div class="status__inactive">
-                                    <p>status inactive</p>
-                                    <input
-                                        type="checkbox"
-                                        class="toggle"
-                                        data-id="inactive"
-                                    />
+                            </div>
+                            <span></span>
+                            <div class="other truncText">
+                                <p class="px-1">Lorem ipsum dolor sit amet.</p>
+                                <div class="tooltip__txt">
+                                    <p class="spaceNormal">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Optio, dolorum fugit!
+                                        Quos, sapiente exercitationem. Quisquam
+                                        natus dolores sapiente ipsam illum.
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="toggleBox">
+                                <input type="checkbox" class="toggleBox__Btn" />
                             </div>
                         </div>
+                    </td>
+                </tr>
+                <tr class="space"></tr>
 
-                        <button class="buttonFilter">clear filter</button>
-                    </div>
-                </div>
-                <!-- CARRIER -->
-                <div class="filter__carrier">
-                    <!--  Name by fitler -->
-                    <button class="titleFilter">
-                        <p>carrier</p>
-                        <img src="./img/carret-down.svg" alt="" />
-                    </button>
-
-                    <!-- Name by tags -->
-
-                    <div class="tags">
-                        <p class="w-13rem">name</p>
+                <!-- *************** 
+                   RESULT ROWS HERE
+                    -->
+                <tr class="result">
+                    <!-- *************** 
+                        SUB-CARRIER
+                        -->
+                    <td class="result__container">
+                        <button class="result__name">
+                            <img src="img/icon-edit.png" alt="" />
+                            <p class="pr-2 mr-2">MarketUK</p>
+                        </button>
                         <span></span>
-                        <p>ID</p>
-                        <span></span>
-                        <p class="w-6rem">SCAC</p>
-                    </div>
-
-                    <!-- DropdownbBOX -->
-                    <div class="containerDropDown hidden">
-                        <div class="containerDropDown__content">
-                            <div class="search">
-                                <input
-                                    type="text"
-                                    placeholder="search"
-                                    class="searchText"
-                                />
+                        <p class="number">1dd</p>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        CARRIER
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="w-9 breakAll spaceNormal px-1">
+                                namdddddd
+                            </p>
+                            <span></span>
+                            <p
+                                class="w-4 tx-uppercase px-1 breakAll spaceNormal"
+                            >
+                                ids
+                            </p>
+                            <span></span>
+                            <p
+                                class="tx-uppercase px-1 w-24 breakAll spaceNormal"
+                            >
+                                scas
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        SERVICE TYPE
+                        -->
+                        <div class="sub-header__txt">
+                            <p>LTL</p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                       THE MARKUP
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-0">$10</p>
+                            <span></span>
+                            <p class="px-1 w-0">$32</p>
+                            <span></span>
+                            <p class="px-1">20%</p>
+                        </div>
+                    </td>
+                    <td class="relative">
+                        <!-- *************** 
+                       TARIFF DESCRIPTION
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-12">800-523-5d020</p>
+                            <span></span>
+                            <div class="tooltip">
                                 <button>
                                     <img
-                                        src="img/Icon awesome-search.svg"
+                                        class="px-1"
+                                        src="img/icon-view.svg"
                                         alt=""
                                     />
                                 </button>
-                            </div>
-                            <div class="items">
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="Marktuyt"
-                                        value="Marktuyt"
-                                        id="Marktuyt"
-                                        class="optionItem"
-                                    />
-                                    <label for="Marktuyt"> Marktuyt </label>
-                                </div>
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="force"
-                                        value="force"
-                                        id="force"
-                                        class="optionItem"
-                                    />
-                                    <label for="force"> force </label>
-                                </div>
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="transUK"
-                                        value="transUK"
-                                        id="transUK"
-                                        class="optionItem"
-                                    />
-                                    <label for="transUK"> transUK </label>
-                                </div>
-
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="dhlXpress"
-                                        value="dhlXpress"
-                                        id="dhlXpress"
-                                        class="optionItem"
-                                    />
-                                    <label for="dhlXpress">dhlXpress </label>
+                                <div class="tooltip__txt">
+                                    <img src="img/icon-envelope.svg" alt="" />
+                                    <a href="mailto://myemail@email.com"
+                                        >info@company.com</a
+                                    >
                                 </div>
                             </div>
-                            <div class="status">
-                                <div class="status__active">
-                                    <p>status active</p>
-                                    <input
-                                        type="checkbox"
-                                        class="toggle"
-                                        data-id="active"
-                                    />
+                            <span></span>
+                            <div class="tooltip truncText">
+                                <p class="px-1">https://www.duie...</p>
+                                <div class="tooltip__txt">
+                                    <img src="img/link.svg" alt="" />
+                                    <a href="https://google.com"
+                                        >https://www.duietrack.com</a
+                                    >
                                 </div>
-                                <div class="status__inactive">
-                                    <p>status inactive</p>
-                                    <input
-                                        type="checkbox"
-                                        class="toggle"
-                                        data-id="inactive"
-                                    />
+                            </div>
+                            <span></span>
+                            <div class="other truncText">
+                                <p class="px-1">Lorem ipsum dolor sit amet.</p>
+                                <div class="tooltip__txt">
+                                    <p class="spaceNormal">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Optio, dolorum fugit!
+                                        Quos, sapiente exercitationem. Quisquam
+                                        natus dolores sapiente ipsam illum.
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="toggleBox">
+                                <input type="checkbox" class="toggleBox__Btn" />
                             </div>
                         </div>
+                    </td>
+                </tr>
 
-                        <button class="buttonFilter">clear filter</button>
-                    </div>
-                </div>
+                <tr class="space"></tr>
 
-                <!-- Service TYPE -->
-                <div class="filter__serviceType">
-                    <!--  Name by fitler -->
-                    <button class="titleFilter">
-                        <p>service type</p>
-                        <img src="./img/carret-down.svg" alt="" />
-                    </button>
-
-                    <!-- Name by tags -->
-
-                    <div class="tags">
-                        <p class="w-xs" id="tagService">LTL</p>
-                    </div>
-
-                    <!-- DropdownbBOX -->
-                    <div class="containerDropDown hidden">
-                        <div class="containerDropDown__content">
-                            <div class="search">
-                                <input
-                                    type="text"
-                                    placeholder="search"
-                                    class="searchText"
-                                />
+                <!-- *************** 
+                   RESULT ROWS HERE
+                    -->
+                <tr class="result">
+                    <!-- *************** 
+                        SUB-CARRIER
+                        -->
+                    <td class="result__container">
+                        <button class="result__name">
+                            <img src="img/icon-edit.png" alt="" />
+                            <p class="pr-2 mr-2">MarketUK</p>
+                        </button>
+                        <span></span>
+                        <p class="number">1dd</p>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        CARRIER
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="w-9 breakAll spaceNormal px-1">
+                                namdddddd
+                            </p>
+                            <span></span>
+                            <p
+                                class="w-4 tx-uppercase px-1 breakAll spaceNormal"
+                            >
+                                ids
+                            </p>
+                            <span></span>
+                            <p
+                                class="tx-uppercase px-1 w-24 breakAll spaceNormal"
+                            >
+                                scas
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        SERVICE TYPE
+                        -->
+                        <div class="sub-header__txt">
+                            <p>LTL</p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                       THE MARKUP
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-0">$10</p>
+                            <span></span>
+                            <p class="px-1 w-0">$32</p>
+                            <span></span>
+                            <p class="px-1">20%</p>
+                        </div>
+                    </td>
+                    <td class="relative">
+                        <!-- *************** 
+                       TARIFF DESCRIPTION
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-12">800-523-5d020</p>
+                            <span></span>
+                            <div class="tooltip">
                                 <button>
                                     <img
-                                        src="img/Icon awesome-search.svg"
+                                        class="px-1"
+                                        src="img/icon-view.svg"
                                         alt=""
                                     />
                                 </button>
-                            </div>
-                            <div class="items">
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="Marktuyt"
-                                        value="Marktuyt"
-                                        id="Marktuyt"
-                                        class="optionItem"
-                                    />
-                                    <label for="Marktuyt"> Marktuyt </label>
-                                </div>
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="force"
-                                        value="force"
-                                        id="force"
-                                        class="optionItem"
-                                    />
-                                    <label for="force"> force </label>
-                                </div>
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="transUK"
-                                        value="transUK"
-                                        id="transUK"
-                                        class="optionItem"
-                                    />
-                                    <label for="transUK"> transUK </label>
-                                </div>
-
-                                <div class="items__item">
-                                    <input
-                                        type="checkbox"
-                                        name="dhlXpress"
-                                        value="dhlXpress"
-                                        id="dhlXpress"
-                                        class="optionItem"
-                                    />
-                                    <label for="dhlXpress">dhlXpress </label>
+                                <div class="tooltip__txt">
+                                    <img src="img/icon-envelope.svg" alt="" />
+                                    <a href="mailto://myemail@email.com"
+                                        >info@company.com</a
+                                    >
                                 </div>
                             </div>
-                            <div class="status">
-                                <div class="status__active">
-                                    <p>status active</p>
-                                    <input
-                                        type="checkbox"
-                                        class="toggle"
-                                        data-id="active"
-                                    />
+                            <span></span>
+                            <div class="tooltip truncText">
+                                <p class="px-1">https://www.duie...</p>
+                                <div class="tooltip__txt">
+                                    <img src="img/link.svg" alt="" />
+                                    <a href="https://google.com"
+                                        >https://www.duietrack.com</a
+                                    >
                                 </div>
-                                <div class="status__inactive">
-                                    <p>status inactive</p>
-                                    <input
-                                        type="checkbox"
-                                        class="toggle"
-                                        data-id="inactive"
-                                    />
+                            </div>
+                            <span></span>
+                            <div class="other truncText">
+                                <p class="px-1">Lorem ipsum dolor sit amet.</p>
+                                <div class="tooltip__txt">
+                                    <p class="spaceNormal">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Optio, dolorum fugit!
+                                        Quos, sapiente exercitationem. Quisquam
+                                        natus dolores sapiente ipsam illum.
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="toggleBox">
+                                <input type="checkbox" class="toggleBox__Btn" />
                             </div>
                         </div>
+                    </td>
+                </tr>
+                <tr class="space"></tr>
 
-                        <button class="buttonFilter">clear filter</button>
-                    </div>
-                </div>
-
-                <!-- MARKUP -->
-                <div class="filter__markup">
-                    <!--  Name by fitler -->
-                    <div class="titleFilterSpecial">
-                        <p>markup</p>
-                    </div>
-
-                    <!-- Name by tags -->
-
-                    <div class="tags p-08">
-                        <p class="">min $</p>
+                <!-- *************** 
+                   RESULT ROWS HERE
+                    -->
+                <tr class="result">
+                    <!-- *************** 
+                        SUB-CARRIER
+                        -->
+                    <td class="result__container">
+                        <button class="result__name">
+                            <img src="img/icon-edit.png" alt="" />
+                            <p class="pr-2 mr-2">MarketUK</p>
+                        </button>
                         <span></span>
-                        <p class="">max $</p>
+                        <p class="number">1dd</p>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        CARRIER
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="w-9 breakAll spaceNormal px-1">
+                                namdddddd
+                            </p>
+                            <span></span>
+                            <p
+                                class="w-4 tx-uppercase px-1 breakAll spaceNormal"
+                            >
+                                ids
+                            </p>
+                            <span></span>
+                            <p
+                                class="tx-uppercase px-1 w-24 breakAll spaceNormal"
+                            >
+                                scas
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        SERVICE TYPE
+                        -->
+                        <div class="sub-header__txt">
+                            <p>LTL</p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                       THE MARKUP
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-0">$10</p>
+                            <span></span>
+                            <p class="px-1 w-0">$32</p>
+                            <span></span>
+                            <p class="px-1">20%</p>
+                        </div>
+                    </td>
+                    <td class="relative">
+                        <!-- *************** 
+                       TARIFF DESCRIPTION
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-12">800-523-5d020</p>
+                            <span></span>
+                            <div class="tooltip">
+                                <button>
+                                    <img
+                                        class="px-1"
+                                        src="img/icon-view.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <div class="tooltip__txt">
+                                    <img src="img/icon-envelope.svg" alt="" />
+                                    <a href="mailto://myemail@email.com"
+                                        >info@company.com</a
+                                    >
+                                </div>
+                            </div>
+                            <span></span>
+                            <div class="tooltip truncText">
+                                <p class="px-1">https://www.duie...</p>
+                                <div class="tooltip__txt">
+                                    <img src="img/link.svg" alt="" />
+                                    <a href="https://google.com"
+                                        >https://www.duietrack.com</a
+                                    >
+                                </div>
+                            </div>
+                            <span></span>
+                            <div class="other truncText">
+                                <p class="px-1">Lorem ipsum dolor sit amet.</p>
+                                <div class="tooltip__txt">
+                                    <p class="spaceNormal">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Optio, dolorum fugit!
+                                        Quos, sapiente exercitationem. Quisquam
+                                        natus dolores sapiente ipsam illum.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="toggleBox">
+                                <input type="checkbox" class="toggleBox__Btn" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="space"></tr>
+                <!-- *************** 
+                   RESULT ROWS HERE
+                    -->
+                <tr class="result">
+                    <!-- *************** 
+                        SUB-CARRIER
+                        -->
+                    <td class="result__container">
+                        <button class="result__name">
+                            <img src="img/icon-edit.png" alt="" />
+                            <p class="pr-2 mr-2">MarketUK</p>
+                        </button>
                         <span></span>
-                        <p class="">margin %</p>
-                    </div>
-                </div>
+                        <p class="number">1dd</p>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        CARRIER
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="w-9 breakAll spaceNormal px-1">
+                                namdddddd
+                            </p>
+                            <span></span>
+                            <p
+                                class="w-4 tx-uppercase px-1 breakAll spaceNormal"
+                            >
+                                ids
+                            </p>
+                            <span></span>
+                            <p
+                                class="tx-uppercase px-1 w-24 breakAll spaceNormal"
+                            >
+                                scas
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        SERVICE TYPE
+                        -->
+                        <div class="sub-header__txt">
+                            <p>LTL</p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                       THE MARKUP
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-0">$10</p>
+                            <span></span>
+                            <p class="px-1 w-0">$32</p>
+                            <span></span>
+                            <p class="px-1">20%</p>
+                        </div>
+                    </td>
+                    <td class="relative">
+                        <!-- *************** 
+                       TARIFF DESCRIPTION
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-12">800-523-5d020</p>
+                            <span></span>
+                            <div class="tooltip">
+                                <button>
+                                    <img
+                                        class="px-1"
+                                        src="img/icon-view.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <div class="tooltip__txt">
+                                    <img src="img/icon-envelope.svg" alt="" />
+                                    <a href="mailto://myemail@email.com"
+                                        >info@company.com</a
+                                    >
+                                </div>
+                            </div>
+                            <span></span>
+                            <div class="tooltip truncText">
+                                <p class="px-1">https://www.duie...</p>
+                                <div class="tooltip__txt">
+                                    <img src="img/link.svg" alt="" />
+                                    <a href="https://google.com"
+                                        >https://www.duietrack.com</a
+                                    >
+                                </div>
+                            </div>
+                            <span></span>
+                            <div class="other truncText">
+                                <p class="px-1">Lorem ipsum dolor sit amet.</p>
+                                <div class="tooltip__txt">
+                                    <p class="spaceNormal">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Optio, dolorum fugit!
+                                        Quos, sapiente exercitationem. Quisquam
+                                        natus dolores sapiente ipsam illum.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="toggleBox">
+                                <input type="checkbox" class="toggleBox__Btn" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="space"></tr>
+                <!-- *************** 
+                   RESULT ROWS HERE
+                    -->
+                <tr class="result">
+                    <!-- *************** 
+                        SUB-CARRIER
+                        -->
+                    <td class="result__container">
+                        <button class="result__name">
+                            <img src="img/icon-edit.png" alt="" />
+                            <p class="pr-2 mr-2">MarketUK</p>
+                        </button>
+                        <span></span>
+                        <p class="number">1dd</p>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        CARRIER
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="w-9 breakAll spaceNormal px-1">
+                                namdddddd
+                            </p>
+                            <span></span>
+                            <p
+                                class="w-4 tx-uppercase px-1 breakAll spaceNormal"
+                            >
+                                ids
+                            </p>
+                            <span></span>
+                            <p
+                                class="tx-uppercase px-1 w-24 breakAll spaceNormal"
+                            >
+                                scas
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                        SERVICE TYPE
+                        -->
+                        <div class="sub-header__txt">
+                            <p>LTL</p>
+                        </div>
+                    </td>
+                    <td>
+                        <!-- *************** 
+                       THE MARKUP
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-0">$10</p>
+                            <span></span>
+                            <p class="px-1 w-0">$32</p>
+                            <span></span>
+                            <p class="px-1">20%</p>
+                        </div>
+                    </td>
+                    <td class="relative">
+                        <!-- *************** 
+                       TARIFF DESCRIPTION
+                        -->
+                        <div class="sub-header__txt">
+                            <p class="px-1 w-12">800-523-5d445</p>
+                            <span></span>
+                            <div class="tooltip">
+                                <button>
+                                    <img
+                                        class="px-1"
+                                        src="img/icon-view.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <div class="tooltip__txt">
+                                    <img src="img/icon-envelope.svg" alt="" />
+                                    <a href="mailto://myemail@email.com"
+                                        >info@company.com</a
+                                    >
+                                </div>
+                            </div>
+                            <span></span>
+                            <div class="tooltip truncText">
+                                <p class="px-1">https://www.duie...</p>
+                                <div class="tooltip__txt">
+                                    <img src="img/link.svg" alt="" />
+                                    <a href="https://google.com"
+                                        >https://www.duietrack.com</a
+                                    >
+                                </div>
+                            </div>
+                            <span></span>
+                            <div class="other truncText">
+                                <p class="px-1">Lorem ipsum dolor sit amet.</p>
+                                <div class="tooltip__txt">
+                                    <p class="spaceNormal">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Optio, dolorum fugit!
+                                        Quos, sapiente exercitationem. Quisquam
+                                        natus dolores sapiente ipsam illum.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="toggleBox">
+                                <input type="checkbox" class="toggleBox__Btn" />
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="space"></tr>
+                <tr class="space"></tr>
 
-                <!-- Tariff Description -->
-                <div class="filter__tariffDescription w-100">
-                    <!--  Name by fitler -->
-                    <div class="titleFilterSpecial">
-                        <p>tariff description</p>
-                    </div>
-
-                    <!-- Name by tags -->
-
-                    <div class="tags">
-                        <p class="">carrier PH</p>
-                        <span></span>
-                        <p class="">email</p>
-                        <span></span>
-                        <p class="">rules URL</p>
-                        <span></span>
-                        <p class="">Other</p>
-                    </div>
+                <tr class="space"></tr>
+            </table>
+        </section>
+        <!-- *************** 
+                       FOOTER PAGINATION
+                        -->
+        <footer class="paginator">
+            <div class="paginator__entry">
+                <select class="paginator__entry--entries">
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                </select>
+                <div class="paginator__entry--txt">
+                    <p>results</p>
+                    <p class="results-page">
+                        <span>1</span>
+                        <span>-</span>
+                        <span>50</span>
+                    </p>
+                    <p>of</p>
+                    <p class="results-total">324</p>
                 </div>
             </div>
-            <div class="results">results</div>
-        </section>
+            <div class="paginator__prevNext">
+                <button
+                    type="button"
+                    disabled
+                    class="paginator__btn inactiveBtn"
+                >
+                    <img src="img/arrow-left.svg" alt="previous" />
+                    <p>prev</p>
+                </button>
+                <ul class="paginator__resultPage">
+                    <a href="#" class="activePage">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                </ul>
+
+                <button type="button" class="paginator__btn activeBtn">
+                    <p>next</p>
+
+                    <img src="img/arrow-right-blue.svg" alt="previous" />
+                </button>
+            </div>
+        </footer>
 
         <script src="main.js"></script>
     </body>

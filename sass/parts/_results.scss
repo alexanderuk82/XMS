@@ -1,0 +1,143 @@
+@use '../abstracts/' as *;
+
+table {
+    width: 100%;
+}
+.header-table {
+    background-color: #fff;
+
+    th {
+        padding: 2rem;
+    }
+
+    button {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        p {
+            text-transform: uppercase;
+            padding: 1rem;
+            font-weight: 600;
+            color: var(--light-navy);
+        }
+    }
+}
+
+.sub-header {
+    color: var(--brownish-grey);
+    text-transform: capitalize;
+    padding: 1rem;
+    border-right: 1px solid var(--greyish);
+    background-color: var(--white);
+
+    &__txt {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    span {
+        height: 3.4rem;
+        border-right: dashed 1px var(--greyish);
+    }
+}
+
+.result {
+    background-color: var(--off-white);
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem 0;
+        .number {
+            text-align: center;
+            width: 47%;
+        }
+    }
+
+    &__name {
+        width: 50%;
+        display: flex;
+        white-space: normal;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-inline: 2rem;
+        margin-right: 1.5rem;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        p {
+            width: 86%;
+            margin-left: 1rem;
+            white-space: normal;
+        }
+    }
+    span {
+        height: 3.4rem;
+        border-right: dashed 1px var(--greyish);
+    }
+}
+
+.space {
+    height: 3rem;
+}
+
+.truncText {
+    cursor: pointer;
+    width: 14.5rem;
+
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.toggleBox {
+    height: 7.4rem;
+    background-color: var(--white);
+    padding: 2rem;
+    width: 7rem;
+    display: grid;
+    place-content: center;
+
+    &__Btn {
+        position: relative;
+        width: 5.4rem;
+        height: 2.2rem;
+        background-color: rgb(255 255 255);
+        outline: none;
+        -webkit-appearance: none;
+        border-radius: 10rem;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        box-shadow: inset 1px 1px 6px rgb(0 0 0 / 37%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 18px;
+            background-color: var(--grass);
+            border-radius: 10rem;
+            top: 2px;
+            right: 0;
+        }
+    }
+}
+.tooltip {
+    @include tooltip(default);
+}
+.other {
+    @include tooltip(other);
+}

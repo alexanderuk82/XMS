@@ -1,0 +1,91 @@
+.paginator {
+    background-color: var(--pale-grey);
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__entry {
+        display: flex;
+
+        &--entries {
+            padding: 0.8rem 0.6rem;
+            border: 0;
+            border-radius: 2px;
+            border: solid 1px var(--warm-grey);
+            background-color: var(--white);
+            color: var(--light-navy);
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url(/img/carret-down.svg);
+            background-repeat: no-repeat;
+            background-position: 3.1rem 1.1rem;
+            padding-right: 2.68rem;
+
+            &:focus,
+            &:hover {
+                outline: none;
+                border: solid 1px var(--light-navy);
+            }
+        }
+
+        &--txt {
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            gap: 1rem;
+
+            .results-page {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__prevNext {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: 0;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+        & > * {
+            padding-inline: 0.5rem;
+        }
+        &.inactiveBtn {
+            p {
+                color: var(--pinkish-grey);
+            }
+        }
+        &.activeBtn {
+            p {
+                color: var(--light-navy);
+            }
+        }
+    }
+
+    &__resultPage {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+
+        a {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+
+            &.activePage {
+                background-color: var(--light-navy);
+                color: #fff;
+            }
+        }
+    }
+}

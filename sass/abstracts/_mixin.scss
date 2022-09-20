@@ -1,5 +1,14 @@
 @use '../abstracts/variables' as *;
 
+//Responsives
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == lgdesktop {
+        @media (min-width: 65.8em) {
+            @content;
+        }
+    }
+}
 
 //Function for Font and weight
 
@@ -153,9 +162,67 @@
     }
 }
 
+// Result for filter text contentSize
+
+@mixin tagsResult($section) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.06);
+    justify-content: space-evenly;
+    padding: 3rem 1rem;
+    line-height: 1.19;
+    font-size: 16px;
+    font-weight: regular;
+    text-transform: capitalize;
+    color: var(--brownish-grey);
+    text-align: center;
+    span {
+        height: 3.4rem;
+        border: dashed 1px var(--greyish);
+    }
+    & > * {
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    @if ($section == 'subcarrier') {
+        p {
+            white-space: normal;
+            width: 97px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 1rem;
+        }
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        span {
+            margin-left: 2rem;
+        }
+        button {
+            border: none;
+            display: flex;
+            background-color: transparent;
+        }
+    }
+    @if ($section == 'carrier') {
+        p {
+            white-space: normal;
+            width: 15rem;
+            text-align: center;
+            margin-left: 1rem;
+        }
+    }
+}
 //Componet filter special
 
-@mixin filterSpecial{
+@mixin filterSpecial {
     background-color: var(--white);
     border: 0;
     outline: 0;
@@ -165,7 +232,7 @@
     color: inherit;
     display: flex;
     align-items: center;
-    justify-content: center;       
+    justify-content: center;
     text-transform: uppercase;
     padding: 2rem 4rem;
     font-weight: 500;
@@ -176,7 +243,7 @@
 @mixin dropDown {
     display: flex;
     flex-direction: column;
-
+    justify-content: space-around;
     .titleFilter {
         background-color: var(--white);
         border: 0;
@@ -290,9 +357,82 @@
     display: grid;
     grid-template-columns: repeat(4, auto) 1fr;
     justify-items: center;
+    align-items: start;
     & > * {
         &:not(:last-child) {
             border-right: solid 2px var(--pinkish-grey);
         }
+    }
+}
+
+//tooltip
+
+@mixin tooltip($section) {
+    position: relative;
+
+    @if ($section == 'other') {
+        &:hover .tooltip__txt {
+            visibility: visible;
+            opacity: 1;
+            top: 4rem;
+            left: -33rem;
+            z-index: 100;
+        }
+        .tooltip__txt {
+            z-index: 100;
+            width: 46rem;
+            left: -33rem;
+            p {
+                text-align: left;
+                overflow: unset !important;
+                text-overflow: unset;
+                white-space: normal;
+            }
+
+            &::before {
+                left: 87%;
+                top: -28%;
+            }
+        }
+    }
+    &__txt {
+        position: absolute;
+        top: 2rem;
+        display: flex;
+        padding: 2rem 1rem;
+        background-color: var(--brownish);
+        border-radius: 2px;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        transition: 0.4s ease;
+
+        & > * {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+
+        a {
+            color: inherit;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 17%;
+            top: -44%;
+            transform: translateX(-50%);
+            border: 15px solid;
+            border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #cbcbcb
+                rgba(0, 0, 0, 0);
+        }
+    }
+
+    &:hover .tooltip__txt {
+        visibility: visible;
+        opacity: 1;
+        top: 4rem;
     }
 }
