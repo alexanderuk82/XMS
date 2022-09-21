@@ -123,6 +123,11 @@ table {
         cursor: pointer;
         box-shadow: inset 1px 1px 6px rgb(0 0 0 / 37%);
 
+        &:checked:before {
+            transform: translateX(-3.5rem);
+            background-color: gray;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -132,9 +137,11 @@ table {
             border-radius: 10rem;
             top: 2px;
             right: 0;
+            transition: transform 0.3s ease-in-out;
         }
     }
 }
+
 .tooltip {
     @include tooltip(default);
 }
