@@ -148,3 +148,13 @@ table {
 .other {
     @include tooltip(other);
 }
+
+.subCarrier {
+    @include dropDown(subcarriers);
+}
+.carrier {
+    @include dropDown(carriers);
+}
+.serviceType {
+    @include dropDown(type);
+}

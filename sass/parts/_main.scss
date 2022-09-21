@@ -15,42 +15,42 @@
     &:has(p) {
         white-space: nowrap;
     }
-    .filter {
-        margin-bottom: 3rem;
-        @include filterTop;
+    // .filter {
+    //     margin-bottom: 3rem;
+    //     @include filterTop;
 
-        &__subCarrier,
-        &__carrier,
-        &__serviceType {
-            position: relative;
-            @include dropDown;
-            .tags {
-                @include tags;
-            }
-            p {
-                white-space: nowrap;
-            }
-        }
+    //     &__subCarrier,
+    //     &__carrier,
+    //     &__serviceType {
+    //         position: relative;
+    //         @include dropDown;
+    //         .tags {
+    //             @include tags;
+    //         }
+    //         p {
+    //             white-space: nowrap;
+    //         }
+    //     }
 
-        &__markup,
-        &__tariffDescription {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            p {
-                white-space: nowrap;
-            }
-        }
+    //     &__markup,
+    //     &__tariffDescription {
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: space-around;
+    //         p {
+    //             white-space: nowrap;
+    //         }
+    //     }
 
-        &__markup,
-        &__tariffDescription {
-            .titleFilterSpecial {
-                @include filterSpecial();
-            }
-            .tags {
-                @include tags;
-            }
-        }
-    }
+    //     &__markup,
+    //     &__tariffDescription {
+    //         .titleFilterSpecial {
+    //             @include filterSpecial();
+    //         }
+    //         .tags {
+    //             @include tags;
+    //         }
+    //     }
+    // }
 }
 

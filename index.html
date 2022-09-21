@@ -44,23 +44,251 @@
                     
                             TITLES AND DROPDOWNS HEADER
                     -->
-                    <th>
-                        <button class="btn-header">
+                    <th class="relative">
+                        <button class="btn-header" id="subCarrier">
                             <p>sub carrier</p>
                             <img src="./img/carret-down.svg" alt="" />
                         </button>
+
+                        <!-- DropdownbBOX -->
+
+                        <div class="subCarrier hidden">
+                            <div class="subCarrier__content">
+                                <div class="search">
+                                    <input
+                                        type="text"
+                                        placeholder="search"
+                                        class="searchText"
+                                    />
+                                    <button>
+                                        <img
+                                            src="img/Icon awesome-search.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <div class="items">
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="Marktuyt"
+                                            value="Marktuyt"
+                                            id="Marktuyt"
+                                            class="optionItem"
+                                        />
+                                        <label for="Marktuyt"> Marktuyt </label>
+                                    </div>
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="force"
+                                            value="force"
+                                            id="force"
+                                            class="optionItem"
+                                        />
+                                        <label for="force"> force </label>
+                                    </div>
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="transUK"
+                                            value="transUK"
+                                            id="transUK"
+                                            class="optionItem"
+                                        />
+                                        <label for="transUK"> transUK </label>
+                                    </div>
+
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="dhlXpress"
+                                            value="dhlXpress"
+                                            id="dhlXpress"
+                                            class="optionItem"
+                                        />
+                                        <label for="dhlXpress"
+                                            >dhlXpress
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <div class="status__active">
+                                        <p>status active</p>
+                                        <input
+                                            type="checkbox"
+                                            class="toggle"
+                                            data-id="active"
+                                        />
+                                    </div>
+                                    <div class="status__inactive">
+                                        <p>status inactive</p>
+                                        <input
+                                            type="checkbox"
+                                            class="toggle"
+                                            data-id="inactive"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="buttonFilter">clear filter</button>
+                        </div>
                     </th>
-                    <th>
-                        <button class="btn-header">
+                    <th class="relative">
+                        <button class="btn-header" id="carrier">
                             <p>carrier</p>
                             <img src="./img/carret-down.svg" alt="" />
                         </button>
+
+                        <!-- DropdownbBOX -->
+
+                        <div class="carrier hidden">
+                            <div class="carrier__content">
+                                <div class="search">
+                                    <input
+                                        type="text"
+                                        placeholder="search"
+                                        class="searchText"
+                                    />
+                                    <button>
+                                        <img
+                                            src="img/Icon awesome-search.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <div class="items">
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="Carrier1"
+                                            value="Carrier1"
+                                            id="Carrier1"
+                                            class="optionItem"
+                                        />
+                                        <label for="Carrier1"> Carrier1</label>
+                                    </div>
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="Carrier2"
+                                            value="Carrier2"
+                                            id="Carrier2"
+                                            class="optionItem"
+                                        />
+                                        <label for="Carrier2"> Carrier2 </label>
+                                    </div>
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="Carrier3"
+                                            value="Carrier3"
+                                            id="Carrier3"
+                                            class="optionItem"
+                                        />
+                                        <label for="Carrier3"> Carrier3 </label>
+                                    </div>
+
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="Carrier4"
+                                            value="Carrier4"
+                                            id="Carrier4"
+                                            class="optionItem"
+                                        />
+                                        <label for="Carrier4">Carrier4 </label>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <div class="status__active">
+                                        <p>status active</p>
+                                        <input
+                                            type="checkbox"
+                                            class="toggle"
+                                            data-id="active"
+                                        />
+                                    </div>
+                                    <div class="status__inactive">
+                                        <p>status inactive</p>
+                                        <input
+                                            type="checkbox"
+                                            class="toggle"
+                                            data-id="inactive"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="buttonFilter">clear filter</button>
+                        </div>
                     </th>
-                    <th>
-                        <button class="btn-header">
+                    <th class="relative">
+                        <button class="btn-header" id="serviceType">
                             <p>service type</p>
                             <img src="./img/carret-down.svg" alt="" />
                         </button>
+                        <!-- DropdownbBOX -->
+
+                        <div class="serviceType hidden">
+                            <div class="serviceType__content">
+                                <div class="items">
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="LTL"
+                                            value="LTL"
+                                            id="LTL"
+                                            class="optionItem"
+                                        />
+                                        <label for="LTL"> LTL </label>
+                                    </div>
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="Volume"
+                                            value="Volume"
+                                            id="Volume"
+                                            class="optionItem"
+                                        />
+                                        <label for="Volume"> Volume </label>
+                                    </div>
+                                    <div class="items__item">
+                                        <input
+                                            type="checkbox"
+                                            name="White-glove"
+                                            value="White-glove"
+                                            id="White-glove"
+                                            class="optionItem"
+                                        />
+                                        <label for="White-glove">
+                                            White glove
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <div class="status__active">
+                                        <p>status active</p>
+                                        <input
+                                            type="checkbox"
+                                            class="toggle"
+                                            data-id="active"
+                                        />
+                                    </div>
+                                    <div class="status__inactive">
+                                        <p>status inactive</p>
+                                        <input
+                                            type="checkbox"
+                                            class="toggle"
+                                            data-id="inactive"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="buttonFilter">clear filter</button>
+                        </div>
                     </th>
                     <th class="tx-uppercase">Markup</th>
                     <th class="tx-uppercase">tariff description</th>

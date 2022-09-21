@@ -1,15 +1,23 @@
-const containerFilter = document.querySelector('.containerDropDown')
+const serviceType = document.querySelector('#serviceType')
+const carrier = document.querySelector('#carrier')
+const subCarrier = document.querySelector('#subCarrier')
 
-const btnTitleFilter = document.querySelector('.titleFilter')
-const btnCarret = document.querySelector('.titleFilter img')
+subCarrier.addEventListener('click', () => {
 
+ const sub = document.querySelector('.subCarrier')
+ sub.classList.toggle('hidden')
 
-btnTitleFilter.addEventListener('click', () => {
-    if (containerFilter.classList.contains('hidden')) {
-        containerFilter.classList.remove('hidden')
-        btnCarret.style.transform = 'rotateX(-180deg)'
-    } else {
-        containerFilter.classList.add('hidden')
-        btnCarret.style.transform = 'rotateX(0deg)'
-    }
 })
+carrier.addEventListener('click', () => {
+
+ const sub = document.querySelector('.carrier')
+ sub.classList.toggle('hidden')
+
+})
+serviceType.addEventListener('click', () => {
+
+ const sub = document.querySelector('.serviceType')
+ sub.classList.toggle('hidden')
+
+})
+
